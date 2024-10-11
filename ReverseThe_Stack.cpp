@@ -25,12 +25,12 @@ class stack {
     node* pop(node *top){
         if (top == NULL){
             cout<<"Stack underflow!\n";
-            return top;
+            exit(1);
         }
+
         node *temp = top;
         top = top -> next ;
-        delete temp;
-        return top;
+        return temp;
 
     }
     void display(node *top){
@@ -43,6 +43,7 @@ class stack {
             cout <<curr -> data <<" ";
             curr = curr-> next;
         }
+        cout<<"\n";
 
     }
 
@@ -52,16 +53,29 @@ class stack {
 
 
 int main (){
+    node *temp = NULL;
     node *top = NULL;
     node *top1 = NULL;
     node *top2 = NULL;
 
-    stack obj;
+    stack obj,temp1,temp2;
+    top = obj.push(1,top);
+    top = obj.push(2,top);
     top = obj.push(3,top);
-    top = obj.push(4,top);
-    top = obj.push(5,top);
+
+    temp = obj.pop(top);
+    top = temp-> next;
+    top1 = obj.push(temp->data,top1);
+
+    temp = obj.pop(top);
+    top = temp-> next;
+    top1 = obj.push(temp->data,top1);
+
     obj.display(top);
-    top = obj.pop(top);
+    obj.display(top1);
+
+
+
 
     
 
