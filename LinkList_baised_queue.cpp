@@ -97,3 +97,34 @@ int main() {
 
     return 0;
 }
+
+
+
+
+
+
+// priority queue
+
+
+// void enqueue(int data, int prio) {
+//     // Create a new node
+//     Node* newNode = new Node();
+//     newNode->data = data;
+//     newNode->priority = prio;
+//     newNode->next = nullptr;
+
+//     // If the queue is empty, or the new node has higher priority than the front
+//     if (front == nullptr || front->priority < prio) {
+//         newNode->next = front;  // Insert new node at the front
+//         front = newNode;
+//     } else {
+//         // Traverse the list to find the correct position to insert the new node
+//         Node* current = front;
+//         while (current->next != nullptr && current->next->priority >= prio) {
+//             current = current->next;
+//         }
+//         // Insert the new node after the current node
+//         newNode->next = current->next;
+//         current->next = newNode;
+//     }
+// }
