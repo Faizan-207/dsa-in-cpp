@@ -63,6 +63,7 @@ class stack {
     }
 };
 
+
 int main() {
     stack obj;
     obj.push(5);
